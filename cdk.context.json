@@ -2,5 +2,14 @@
   "hosted-zone:account=637423312279:domainName=web-no-benkyo.com:region=us-east-1": {
     "Id": "/hostedzone/Z011914824FS45C1C472B",
     "Name": "web-no-benkyo.com."
+  },
+  "availability-zones:account=637423312279:region=ap-northeast-1": [
+    "ap-northeast-1a",
+    "ap-northeast-1c",
+    "ap-northeast-1d"
+  ],
+  "hosted-zone:account=637423312279:domainName=web-no-benkyo.com:region=ap-northeast-1": {
+    "Id": "/hostedzone/Z011914824FS45C1C472B",
+    "Name": "web-no-benkyo.com."
   }
 }

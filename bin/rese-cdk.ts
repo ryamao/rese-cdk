@@ -5,6 +5,7 @@ import * as dotenv from "dotenv";
 import * as path from "path";
 import { UsCertificateStack } from "../lib/us-certificate-stack";
 import { FrontendStack } from "../lib/frontend-stack";
+import { BackendStack } from "../lib/backend-stack";
 
 dotenv.config({ path: path.resolve(__dirname, "../.env.local") });
 
@@ -26,4 +27,11 @@ new FrontendStack(app, "FrontendStack", {
   crossRegionReferences: true,
   hostedZone: usStack.hostedZone,
   certificate: usStack.certificate,
+});
+
+new BackendStack(app, "BackendStack", {
+  env: {
+    account: process.env.AWS_ACCOUNT_ID,
+    region: "ap-northeast-1",
+  },
 });
